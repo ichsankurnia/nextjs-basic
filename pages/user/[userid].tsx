@@ -33,7 +33,7 @@ export default function UserDetail({ user }: Props) {
 }
 
 export async function getStaticPaths() {
-	const res = await fetch('http://localhost:1010/user')
+	const res = await fetch(process.env.API_URL + '/user')
 	const dataUser = await res.json()
 
 	const paths = dataUser.map((user: User) => {
@@ -60,7 +60,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: any) {
 	console.log(context)
 	const { userid } = context.params
-	const res = await fetch('http://localhost:1010/user/' + userid)
+	const res = await fetch(process.env.API_URL + '/user/' + userid)
 	const user = await res.json()
 
 	return {

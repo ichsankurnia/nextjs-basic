@@ -40,7 +40,7 @@ export default function post({ data }: Props) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-	const res = await fetch('http://localhost:1010/posts')
+	const res = await fetch(process.env.API_URL + '/posts')
 	const data = await res.json()
 
 	return {

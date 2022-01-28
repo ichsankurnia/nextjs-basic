@@ -25,7 +25,7 @@ function index({ data }: Props) {
 }
 
 export async function getStaticProps() {
-	const res = await fetch('http://localhost:1010/user')
+	const res = await fetch(process.env.API_URL + '/user')
 	const data = await res.json()
 
 	return {
