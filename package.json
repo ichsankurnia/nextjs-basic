@@ -1,11 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "set port=3014 && next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "set port=3014 && next start"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
