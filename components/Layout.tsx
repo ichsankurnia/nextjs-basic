@@ -20,7 +20,7 @@ export default function Layout({ children, titlePage }: Props) {
 			<div className="flex min-h-screen flex-col">
 
 				<nav className='flex justify-end space-x-3 p-5 shadow font-medium'>
-					<Link href='/'><a className={`${pathname==='/' || pathname===''?'text-blue-500':'text-black'}`}>Home</a></Link>
+					<Link href='/'><a className={`${pathname==='/' || pathname===''?'text-blue-500':'text-black'} hover:text-blue-500`}>Home</a></Link>
 					<Link href='/post'><a className={`${pathname==='/post'?'text-blue-500':'text-black'}`}>Post</a></Link>
 					<Link href='/user'><a className={`${pathname==='/user'?'text-blue-500':'text-black'}`}>User</a></Link>
 				</nav>
